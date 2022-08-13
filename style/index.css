@@ -48,7 +48,8 @@ table {
 }
 
 * {
-
+    box-sizing: border-box;
+    max-width: 100%;
 }
 
 /* general */
@@ -65,34 +66,33 @@ body {
 }
 
 h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
     font-family: 'Playfair Display', serif;
+    font-weight: bold;
 }
 
 /* header */
 header {
-    position: absolute;
     z-index: 999;
-    height: 20%;
+    height: 15vh;
     width: 100%;
     display: flex;
     justify-content: space-between;
+    background-color: #E3B448;
 }
 
 header .container {
-    width: 35%;
+    width: 40%;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
-    border: 1px solid red;
-
 }
 
 header img {
-    height: 70%;
+    height: 80%;
     width: auto;
     border-radius: 10px;
+    margin: 0 3%;
 }
 
 header h1 {
@@ -101,12 +101,76 @@ header h1 {
 
 header nav {
     width: 40%;
-    border: 1px solid red;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
+
+header nav div {
+    align-items: center;
+    background-color: #3A6B35;
+    border-radius: 10px;
+    margin: 0 3%;
+}
+
+header a {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding: 8px 8px;
+    border-radius: 10px;
+}
+
+header a:hover {
+    color: #3A6B35;
+    background-color: white;
+}
+
 /* spotlight section */
+#spotlight {
+    background-color: #CBD18F;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
 
+#spotlight img {
+    margin: 2%;
+    /* border: 1px solid black; */
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px 0 rgba(0, 0, 0, .5);
+}
 
+#spotlight .container {
+    margin: 0 5%;
+}
 
+#spotlight h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2%;
+}
+
+#spotlight a {
+    text-decoration: none;
+    background-color: #E3B448;
+    color: black;
+    padding: 8px 8px;
+    border-radius: 10px;
+}
+
+#spotlight a:hover {
+    color: white;
+}
+
+#spotlight p {
+    margin-top: 3%;
+    font-size: 1.7rem;
+}
+
+#spotlight span {
+    font-weight: bold;
+}
 /* gallery */
 
 

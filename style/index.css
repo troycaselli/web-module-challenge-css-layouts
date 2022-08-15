@@ -74,7 +74,7 @@ h1 {
 /* header */
 header {
     z-index: 999;
-    height: 15vh;
+    padding: 3%;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -132,16 +132,10 @@ header a:hover {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    padding: 3%;
 }
 
-#spotlight .pc {
-    margin: 2%;
-    border-radius: 20px;
-    box-shadow: 10px 10px 10px 0 rgba(0, 0, 0, .5);
-}
-
-#spotlight .tablet, #spotlight .mobile {
-    display: none;
+#spotlight img {
     margin: 2%;
     border-radius: 20px;
     box-shadow: 10px 10px 10px 0 rgba(0, 0, 0, .5);
@@ -181,24 +175,21 @@ header a:hover {
 /* gallery */
 #gallery {
     background-color: #F0ECEC;
+    padding: 3% 0;
 }
 
-#gallery .desktop, #gallery .mobile {
+#gallery {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
 }
 
-#gallery .desktop div {
+#gallery div {
     display: flex;
     align-items: center;
     flex-direction: column;
     width: 250px;
     margin: 2% 2.5%;
-}
-
-#gallery .mobile {
-    display: none;
 }
 
 #gallery img {
@@ -213,17 +204,17 @@ header a:hover {
 
 /* footer */
 footer {
-    height: 25vh;
+    padding: 2%;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     background-color: #E3B448;
 }
 
 footer h2 {
 font-weight: bold;
 font-size: 2rem;
-margin-bottom: 10%;
 }
 
 footer .footerContact {
@@ -233,17 +224,13 @@ footer .footerContact {
     justify-content: center;
     padding: 6px 8px;
     border-radius: 10px;
-    margin-top: 2%;
+    margin: 1% 0;
     background-color: #3A6B35;
 }
 
 footer .footerContact:hover {
     color: #3A6B35;
     background-color: #F0ECEC;
-}
-
-footer .social {
-    /* align-self:flex-end; */
 }
 
 footer i {
@@ -258,21 +245,13 @@ footer i:hover {
     header .container {
         width: 60%;
     }
+
+    #spotlight img {
+        width: 50%;
+     }
 }
 
 @media(max-width: 1000px) {
-    #spotlight {
-        height: 50vh;
-    }
-    
-    #spotlight .pc {
-        display: none;
-     }
- 
-     #spotlight .mobile {
-         display: flex;
-     }
-     
      #spotlight .container {
          margin: 0 5%;
      }
@@ -287,9 +266,32 @@ footer i:hover {
         width: 50%;
     }
 
+    #spotlight img {
+        width: 40%;
+     }
+} 
+
+@media(max-width: 800px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    header .container {
+        width: 80%;
+    }
+}
+
+@media(max-width: 700px) {
+    header .container {
+        width: 100%;
+        flex-direction: column;
+        margin: 0;
+        justify-content: space-around;
+    }
     #spotlight {
         flex-direction: column;
-        height: 70vh;
     }
 
     #spotlight .container {
@@ -298,60 +300,43 @@ footer i:hover {
         align-items: center;
         text-align: center;
     }
-} 
 
-@media(max-width: 800px) {
-    header {
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-evenly;
-        height: 30vh;
+    #spotlight img {
+        width: 65%;
     }
 
-    header .container {
+    #gallery div {
+        width: 40%;
+    }
+
+    #gallery img {
         width: 80%;
     }
-
-    #spotlight .tablet {
-        display: none;
-    }
-
-    #spotlight .mobile {
-        display: flex;
-    }
 }
 
-@media(max-width: 650px) {
-    header {
-        height: 35vh;
+@media(max-width: 500px) {
+    h1 {
+        font-size: 2.5rem;
     }
-
-    header .container {
-        width: 100%;
+    
+    header nav {
         flex-direction: column;
-        margin: 0;
-        justify-content: space-around;
     }
 
-    #gallery .desktop div {
-        width: 200px;
-    }
-}
-
-@media(max-width: 501px) {
-    #gallery .desktop {
-        display: none;
+    header a {
+        padding: 5px 20px;
+        font-size: 1.2rem;
     }
 
-    #gallery .mobile {
-        display: flex;
+    header nav div {
+        margin: 1%;
     }
 
-    #gallery .mobile div {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        width: 100px;
-        margin: 2% 10%;
+    footer {
+        padding: 5%;
+    }
+
+    footer .footerContact {
+        margin: 2% 0;
     }
 }

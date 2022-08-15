@@ -82,17 +82,16 @@ header {
 }
 
 header .container {
-    width: 40%;
+    width: 50%;
     display: flex;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
 }
 
 header img {
-    height: 80%;
-    width: auto;
+    height: 12vh;
     border-radius: 10px;
-    margin: 0 3%;
+    margin: 0 3% 0 4%;
 }
 
 header h1 {
@@ -135,7 +134,14 @@ header a:hover {
     align-items: center;
 }
 
-#spotlight img {
+#spotlight .pc {
+    margin: 2%;
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px 0 rgba(0, 0, 0, .5);
+}
+
+#spotlight .tablet, #spotlight .mobile {
+    display: none;
     margin: 2%;
     border-radius: 20px;
     box-shadow: 10px 10px 10px 0 rgba(0, 0, 0, .5);
@@ -174,18 +180,25 @@ header a:hover {
 
 /* gallery */
 #gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
     background-color: #F0ECEC;
 }
 
-#gallery div {
+#gallery .desktop, #gallery .mobile {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#gallery .desktop div {
     display: flex;
     align-items: center;
     flex-direction: column;
     width: 250px;
     margin: 2% 2.5%;
+}
+
+#gallery .mobile {
+    display: none;
 }
 
 #gallery img {
@@ -239,4 +252,106 @@ footer i {
 
 footer i:hover {
     color:  #0072b1;
+}
+
+@media(max-width: 1100px) {
+    header .container {
+        width: 60%;
+    }
+}
+
+@media(max-width: 1000px) {
+    #spotlight {
+        height: 50vh;
+    }
+    
+    #spotlight .pc {
+        display: none;
+     }
+ 
+     #spotlight .mobile {
+         display: flex;
+     }
+     
+     #spotlight .container {
+         margin: 0 5%;
+     }
+}
+
+@media(max-width: 900px) {
+    header .container {
+        width: 50%;
+    }
+
+    header nav {
+        width: 50%;
+    }
+
+    #spotlight {
+        flex-direction: column;
+        height: 70vh;
+    }
+
+    #spotlight .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+} 
+
+@media(max-width: 800px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        height: 30vh;
+    }
+
+    header .container {
+        width: 80%;
+    }
+
+    #spotlight .tablet {
+        display: none;
+    }
+
+    #spotlight .mobile {
+        display: flex;
+    }
+}
+
+@media(max-width: 650px) {
+    header {
+        height: 35vh;
+    }
+
+    header .container {
+        width: 100%;
+        flex-direction: column;
+        margin: 0;
+        justify-content: space-around;
+    }
+
+    #gallery .desktop div {
+        width: 200px;
+    }
+}
+
+@media(max-width: 501px) {
+    #gallery .desktop {
+        display: none;
+    }
+
+    #gallery .mobile {
+        display: flex;
+    }
+
+    #gallery .mobile div {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 100px;
+        margin: 2% 10%;
+    }
 }
